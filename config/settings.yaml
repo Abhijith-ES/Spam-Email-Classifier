@@ -1,0 +1,23 @@
+# --- Data Configuration ---
+DATA_FILE: data/spam_data_2.csv
+ENCODING: latin-1
+TEST_SIZE: 0.2
+RANDOM_STATE: 42
+
+# --- Model Selection ---
+# Options should match the names used in src/01_train_and_save.py:
+# "Logistic Regression", "Naive Bayes", "Support Vector Machine", or "Random Forest"
+MODEL_TO_USE: "Support Vector Machine"
+
+# --- Gmail API Configuration ---
+# The query to filter emails (see Gmail search operators for more options)
+QUERY: "in:inbox is:unread"
+
+# Maximum number of emails to fetch and classify in one run
+MAX_EMAILS: 20
+
+# The path to the token file created after initial authorization
+TOKEN_FILE: token.json
+
+# The path to the credentials file downloaded from Google Cloud Console
+CREDENTIALS_FILE: credentials.json
